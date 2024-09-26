@@ -49,7 +49,7 @@ jobs:
         with:
           projectBaseDir: frontend
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}  # Needed to get PR information, if any
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_PULLREQUEST_KEY: ${{ github.event.pull_request.number }}  # This is the missing key
           SONAR_PULLREQUEST_BASE: ${{ github.base_ref }}

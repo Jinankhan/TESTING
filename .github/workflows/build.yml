@@ -44,7 +44,7 @@ jobs:
          projectBaseDir: frontend
         uses: SonarSource/sonarcloud-github-action@master
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Needed to get PR information, if any
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           # SONAR_PULLREQUEST_BASE: ${{ github.base_ref }}
           # SONAR_PULLREQUEST_BRANCH: ${{ github.head_ref }}
